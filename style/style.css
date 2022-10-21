@@ -1,0 +1,101 @@
+@import url(./base.css);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background-attachment: fixed;
+  background-image: linear-gradient(
+    to left,
+    var(--cor-bg-principal),
+    var(--cor-bg-secundaria),
+    var(--cor-bg-terciaria),
+    var(--cor-bg-quarta)
+  );
+  background-size: 300% 100%;
+  animation: colors 15s ease infinite alternate;
+}
+
+#app {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 50vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2.8rem 2rem 4rem;
+  background: var(--cor-bg-ceu);
+  border: 0.1rem solid #323238;
+  border-radius: 0.6rem;
+  box-shadow: 5px 5px 5px rgb(95, 96, 97);
+  flex-wrap: wrap;
+}
+
+#app header {
+  font-size: 5vh;
+  margin-top: -15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#app .stats {
+  display: flex;
+  font-size: 3vh;
+  border: 1px solid black;
+  align-items: center;
+  width: 13.5vw;
+  height: 5vw;
+  border-radius: 10px;
+  box-shadow: 2px 2px blue;
+}
+.stats h1 {
+  margin-right: 1vw;
+}
+#app .graph {
+  display: flex;
+  font-size: 3.4vh;
+  border: 1px solid black;
+  padding: 1vh;
+  width: 30vw;
+  height: 5vw;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px blue;
+}
+
+#app .icons {
+  position: absolute;
+  margin: 10vh auto;
+  animation: movimentionIcons 5s ease alternate infinite;
+}
+
+#teste {
+  height: 500px;
+}
+
+@keyframes movimentionIcons {
+  from {
+    margin-top: -5%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
